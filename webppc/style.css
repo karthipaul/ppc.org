@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  }
+
+body{
+  justify-content:right;
+  align-items: top;
+  background: #1D212B;
+  background-repeat: no-repeat;
+  background-size: 330px 500px;
+}
+
+.img-slider{
+  position: relative;
+  width: 300px;
+  margin: 10px;
+  background: #1D212B;
+}
+img.one {
+  height:100%;
+  width:100%;
+}
+.img-slider .slide{
+  z-index: 1;
+  position: absolute;
+  clip-path: circle(0% at 0 50%);
+}
+
+.img-slider .slide.active{
+  clip-path: circle(200% at 0 50%);
+  transition: 2s;
+  transition-property: clip-path;
+}
+
+.img-slider .slide img{
+  z-index: 1;
+  width:330px;
+  height:475px;
+  border-radius:2px;
+}
+
+.img-slider .slide .info{
+  position: absolute;
+  }
+.img-slider .navigation{
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  top: 430px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.img-slider .navigation .btn{
+  background: rgba(255, 255, 255, 0.5);
+  width: 12px;
+  height: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.img-slider .navigation .btn.active{
+  background: #2696E9;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
